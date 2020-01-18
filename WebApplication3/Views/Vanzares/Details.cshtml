@@ -1,0 +1,98 @@
+﻿@model WebApplication3.Models.Vanzare
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vanzare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.descriere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data.descriere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locatie.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locatie.descriere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produs.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produs.descriere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.produsId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.produsId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locatieId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locatieId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pret)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantitate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantitate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vanzareId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

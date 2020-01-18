@@ -1,0 +1,34 @@
+﻿@model WebApplication3.Models.Data
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Data</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vanzare.vanzareId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vanzare.vanzareId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriere)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dataId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication3.Models.Vanzare>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.descriere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data.descriere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locatie.descriere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produs.descriere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.produsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locatieId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pret)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantitate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.descriere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data.descriere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Locatie.descriere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produs.descriere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.produsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locatieId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pret)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantitate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vanzareId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vanzareId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vanzareId })
+        </td>
+    </tr>
+}
+
+</table>
